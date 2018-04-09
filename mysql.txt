@@ -1,0 +1,4 @@
+$mysqluser = "b18_20197884";
+$mysqlpass = "open1234"
+
+$dbh = new PDO("mysql:host=sql105.byethost18.com;dbname=b18_20197884_csusb", $_SESSION['mysqluser'], $_SESSION['mysqlpass']);

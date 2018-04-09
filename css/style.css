@@ -1,0 +1,366 @@
+/** Main Body Content **/
+
+html{
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+body{
+  background-color: #d3d3d3;
+  margin-bottom: 49px
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+}
+
+body > .container{
+    width: 95vw;
+    min-height: 80vh;
+}
+
+/** Main Body Content **/
+
+/* ---------------------------------------------------------------------------------------- */
+
+/** Header **/
+.hero-image {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../images/bg-image.jpg) no-repeat center center;
+    background-size: cover;
+}
+.imgcontainer { /* Center the logo image inside this container */
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+.logo { /* Logo image */
+    border-radius: 50%;
+}
+.hero-text {
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 15%;
+}
+.hero-text h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 4em;
+    font-family: 'Bevan', cursive;
+}
+.hero-divider { /* hr divider in hero-text*/
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.hero-text h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+.g-signin2 {
+    margin: auto;
+    width: 180px;
+}
+@media(max-width:767px) {
+    .intro-message {
+        padding-bottom: 15%;
+    }
+    .intro-message > h1 {
+        font-size: 3em;
+    }
+    .intro-divider {
+        width: 100%;
+    }
+}
+/** Header **/
+
+/* ---------------------------------------------------------------------------------------- */
+
+/** Navigation Bar **/
+.topnav {
+    font-size: 14px; 
+}
+
+.lead {
+    font-size: 18px;
+}
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.navbar-default {
+  background-color: #0065bd;
+  border-color: #111111;
+}
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #d3d3d3;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #d3d3d3;
+  background-color: #0065bd;
+  border-bottom: 5px solid #d3d3d3;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #111111;
+}
+.navbar-default .navbar-toggle {
+  border-color: #111111;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #111111;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-link {
+  color: #ffffff;
+}
+.navbar-default .navbar-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #111111;
+  }
+}
+/** Navigation Bar **/
+
+/* ---------------------------------------------------------------------------------------- */
+
+/** Modal Styling **/
+.modal {
+   position: fixed;
+   top: 0%;
+   overflow: auto;
+   overflow-y: auto;
+}
+/** Modal Styling **/
+
+/* ---------------------------------------------------------------------------------------- */
+
+/** Calendar Styling **/
+#calendar, #events, #faculty, #student {
+    padding-top: 25px;
+	max-width: 75%;
+	margin: 0 auto;
+}
+
+.fc-view-container{
+  margin-bottom: 70px;
+}
+
+@media(max-width:900px) {
+   #calendar, #events, #faculty, #student {
+      max-width: 100%;
+    }
+    
+    .fc-icon, body .fc{
+      font-size: .65em;
+    }
+}
+
+/** Calendar Styling **/
+/* ---------------------------------------------------------------------------------------- */
+
+/** Profile **/
+
+.form-profile
+{
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-profile .form-control
+{
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-profile input[type="text"]
+{
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.account-wall
+{
+    margin-top: 20px;
+    padding: 40px 0px 20px 0px;
+    background-color: #f7f7f7;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.profile-title
+{
+    color: #555;
+    font-weight: 400;
+    display: block;
+}
+.profile-img
+{
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+/** Profile **/
+/* ---------------------------------------------------------------------------------------- */
+
+/**Instructions **/
+
+#instructions button {
+    margin-top: 5px;
+    display: inline-block;
+}
+
+#accordion .panel {
+	border:none;
+	-webkit-box-shadow:none; 
+    box-shadow:none;
+    background-color: transparent;
+}
+.div-collapse {
+  border-top: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.div-collapse {
+  overflow-x: visible;
+  -webkit-overflow-scrolling: touch;
+  border-top: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #instructions {
+        font-size: 1em;
+    }
+    
+    .div-collapse.collapse {
+        display: block !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+}
+
+/**Instructions **/
+/* ---------------------------------------------------------------------------------------- */
+
+/**Side Bar **/
+
+.sidenav {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #0065bd;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav h3, .sidenav a h3 {
+    padding: 8px 8px 8px 32px;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'Bevan', cursive;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+
+.list {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+
+.list:hover, .list:focus, .sidenav a h3:hover{
+    text-decoration: none !important;
+    color: #818181;
+    cursor: pointer;
+}
+
+.delClass:hover{
+    text-decoration: none;
+    color: red;
+    cursor: pointer;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #ffffff;
+}
+
+/**Side Bar **/
+
+
+/* ---------------------------------------------------------------------------------------- */
+
+/** Footer **/
+footer > .container {
+    background-color: #f8f8f8;
+    padding-top: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+}
+/** Footer **/
