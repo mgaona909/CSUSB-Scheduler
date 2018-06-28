@@ -15,13 +15,18 @@
     $image = $request['image'];
     $id_token = $request['id_token'];
     
-    $client = new Google_Client(['client_id' => $CLIENT_ID]);
-    $payload = $client->verifyIdToken($id_token);
-    if ($payload) {
-      $userid = $payload['sub'];
-    } else {
-      // Invalid ID token
-      echo "<script>console.log('Invalid google ID token');</script>";
+    if(!$id_token){
+        $userid = 0;
+    } 
+    else {
+        $client = new Google_Client(['client_id' => $CLIENT_ID]);
+        $payload = $client->verifyIdToken($id_token);
+        if ($payload) {
+          $userid = $payload['sub'];
+        } else {
+          // Invalid ID token
+          echo "<script>console.log('Invalid google ID token');</script>";
+        }
     }
         
     // Connects with database
