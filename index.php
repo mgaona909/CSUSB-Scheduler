@@ -68,6 +68,7 @@
                             <h3>Please Sign-In With Your Student Email</h3>
                             <hr class="hero-divider">
                             <div class="g-signin2 google" data-onSuccess="onSignIn" data-longtitle="true"></div>
+                            <div class="guest-btn"><button type="button" class="btn btn-info" onClick="guestLogin()">Continue as Guest</button></div>
                         </div><!-- hero-text -->
                     </div><!-- col-lg-12 -->
                 </div><!-- row -->
@@ -89,5 +90,18 @@
 </body>
     <script type="text/javascript">
         appStart();
+        
+        function guestLogin(){
+            ajax('googleAccounts.php', {fname:"Guest", lname:"Guest", email:"guest@email.com"}, function(response){
+        		if(response.result === 'error'){
+        			console.log("Something went wrong");
+        		}else if (response.result==='success'){
+        			location.reload()
+        		} else {
+        		   console.log('Response message has no result attribute');
+        		}
+        		
+            });
+        }
     </script>
 </html>
