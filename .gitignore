@@ -1,1 +1,11 @@
-scripts/googlesignin.js
+scripts/googleSignin.js
+
+vendor/
+
+"Unused Files"/
+
+*.sql
+
+*.txt
+
+php.ini
