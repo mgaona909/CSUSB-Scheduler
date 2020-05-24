@@ -1,5 +1,7 @@
 /*global $, gapi, ajax, location, reportError, data, moment*/
 
+//this should be ignored
+
 var profile;
 var id_token;
 var client;
