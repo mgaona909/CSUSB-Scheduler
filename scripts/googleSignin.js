@@ -89,11 +89,12 @@ function onSignIn(googleUser) {
 
 
 function signOut() {
-  auth2 = gapi.auth2.getAuthInstance();
-  auth2.signOut().then(function () {
-	console.log('User signed out.');
-  });
-  
+	auth2 = gapi.auth2.getAuthInstance();
+	if(auth2){
+		auth2.signOut().then(function () {
+			console.log('User signed out.');
+		});
+	}
    ajax('logout.php', null, function(response){
 	  location.reload()
   });
