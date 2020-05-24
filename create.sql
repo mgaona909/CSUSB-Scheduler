@@ -1,8 +1,7 @@
-USE b18_20197884_csusb;
+USE csusb;
 
 SET FOREIGN_KEY_CHECKS=0;
 
-drop table googleUsers;
 
 CREATE TABLE IF NOT EXISTS `googleUsers` (
     `googleID`  varchar(500) PRIMARY KEY NOT NULL,
@@ -12,7 +11,6 @@ CREATE TABLE IF NOT EXISTS `googleUsers` (
     `account`   varchar(20)
 );
 
-drop table events;
 
 CREATE TABLE IF NOT EXISTS `events` (
     `eventID`       int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -26,7 +24,6 @@ CREATE TABLE IF NOT EXISTS `events` (
     `end`           datetime DEFAULT NULL
 ) AUTO_INCREMENT=1;
 
-drop table enrollment;
 
 CREATE TABLE IF NOT EXISTS `enrollment` (
     `studentid` varchar(500) NOT NULL,
@@ -35,7 +32,6 @@ CREATE TABLE IF NOT EXISTS `enrollment` (
     FOREIGN KEY (studentid) REFERENCES googleUsers(googleID)
 );
 
-drop table classes;
 
 CREATE TABLE IF NOT EXISTS `classes` (
     `classID`       int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,

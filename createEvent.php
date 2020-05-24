@@ -1,5 +1,7 @@
 <?php
     // This file creates a new event
+
+    require 'dbcredentials.php';
     
     session_start();
     
@@ -23,12 +25,7 @@
     }
     
     // Connects with database
-    try {
-        $dbh = new PDO("mysql:host=localhost;dbname=b18_20197884_csusb", root, NULL);
-        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (PDOException $e) {
-        exit($e->getMessage());
-    }
+    $dbh = connectDB();
     
     $stmt = $dbh->prepare("INSERT INTO events (id, title, eventType, description, color, start, end) VALUES (:id, :title, :eventType, :description, :color, :start, :end)");
     $stmt->bindParam(':id', $id);

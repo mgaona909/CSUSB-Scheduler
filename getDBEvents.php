@@ -1,4 +1,7 @@
 <?php
+
+    require 'dbcredentials.php';
+
     session_start();
     
     // Checks to see if a user is logged in, if not redirect to index.php
@@ -22,11 +25,7 @@
         return (strcmp(substr($mainStr, $loc, strlen($str)), $str) == 0);
     }
     
-    try {
-        $dbh = new PDO("mysql:host=localhost;dbname=b18_20197884_csusb", root, NULL);
-    } catch (PDOException $e) {
-        exit($e->getMessage());
-    }
+    $dbh = connectDB();
     
     if (contains_substr($callingPage, "schedulePage.php")){
         $stmt = $dbh->prepare("SELECT eventID, id, title, eventType, description, color, date_format(start, '%Y-%m-%dT%H:%i:%s') as start, date_format(end, '%Y-%m-%dT%H:%i:%s') as end FROM events WHERE id = :currentUser AND class IS NULL");

@@ -5,10 +5,8 @@ var id_token;
 var client;
 var auth2; // The Sign-In object.
 var googleUser; // The current user.
-var CLIENT_ID = "564010345649-44di9sthgr1qlil8kgl6o1q0ighceknj.apps.googleusercontent.com";
-var APIKEY = 'AIzaSyDWJlUe3EO7M7pTGlxScsZ_WLoXObJ5d2k';
-var DISCOVERY_DOCS = 'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest';
-var SCOPES = "https://www.googleapis.com/auth/calendar";
+var CLIENT_ID = "564010345649-dh6lka9musmfef24a0q36o7arq9gsq3i.apps.googleusercontent.com";
+
 /**
  * Calls startAuth after Sign in V2 finishes setting up.
  */

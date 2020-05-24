@@ -1,10 +1,9 @@
 <?php
     // This file creates a new user account
     session_start();
-    require_once 'composer/vendor/autoload.php';
+    require_once 'vendor/autoload.php';
+    require 'dbcredentials.php';
     
-    $_SESSION['mysqluser'] = "b18_20197884";
-    $_SESSION['mysqlpass'] = "open1234";
     
     $request = json_decode(file_get_contents("php://input"), true);
     
@@ -19,7 +18,7 @@
         $userid = 0;
     } 
     else {
-        $client = new Google_Client(['client_id' => $CLIENT_ID]);
+        $client = new Google_Client();
         $payload = $client->verifyIdToken($id_token);
         if ($payload) {
           $userid = $payload['sub'];
@@ -29,13 +28,7 @@
         }
     }
         
-    // Connects with database
-    try {
-        $dbh = new PDO("mysql:host=localhost;dbname=b18_20197884_csusb", root, NULL);
-        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (PDOException $e) {
-        exit($e->getMessage());
-    }
+    $dbh = connectDB();
     
     // Searches the database for a username that matches the typed in username
     $stmt = $dbh->prepare("SELECT * FROM googleUsers WHERE googleID = :googleID");
